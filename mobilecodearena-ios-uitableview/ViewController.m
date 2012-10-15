@@ -25,6 +25,7 @@
 
 - (void)loadView
 {
+    // Adiciona uma view parent onde será incluída a UITableView
     UIView *viewDummy = [[[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
     [viewDummy setBackgroundColor:[UIColor lightGrayColor]];
 
@@ -54,6 +55,7 @@
     [tableView setDelegate:self];
     [tableView setDataSource:self];
     
+    // Adiciona a UITableView na view parent
     [viewDummy addSubview:tableView];
     
     [tableView release];
