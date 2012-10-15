@@ -61,17 +61,23 @@
     self.view = viewDummy;
 }
 
-- (int)numberOfSectionsInTableView:(UITableView *)tableView // Método chamado para configurar o número de sections da table view. Caso a table seja de itens não categorizados, esse método deve retornar 1.
+// Método chamado para configurar o número de sections da table view.
+// Caso a table seja de itens não categorizados, esse método deve retornar 1.
+- (int)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
-- (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section // Método chamado para configurar o número de rows de uma section. Caso a table seja de itens não categorizados, esse método deve retornar o número total de rows da table view.
+// Método chamado para configurar o número de rows de uma section.
+// Caso a table seja de itens não categorizados, esse método deve retornar o número total de rows da table view.
+- (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [itens count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath // Método chamado para configurar a célula exibida na table view. IndexPath é um objeto composto de section e row para identificar a célula que deve ser exibida.
+// Método chamado para configurar a célula exibida na table view.
+// IndexPath é um objeto composto de section e row para identificar a célula que deve ser exibida.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int storyIndex = indexPath.row;
     
